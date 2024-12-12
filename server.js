@@ -9,7 +9,7 @@ const app=express();
 //middleware
 app.use(
     cors({
-        origin: 'https://myeventschedular.vercel.app', // Allow requests only from this origin
+        origin: ['https://myeventschedular.vercel.app',"http://localhost:3000"], // Allow requests only from this origin
         methods: ['GET', 'POST','PUT','PATCH','DELETE'], // Specify allowed HTTP methods
         credentials: true, // Include credentials like cookies in requests
         allowedHeaders:true,
