@@ -13,6 +13,8 @@ app.use(
         methods: ['GET', 'POST','PUT','PATCH','DELETE'], // Specify allowed HTTP methods
         credentials: true, // Include credentials like cookies in requests
         allowedHeaders:true,
+        allowedHeaders: ['Content-Type', 'Authorization'], // Add necessary headers
+
     })
 );
 
