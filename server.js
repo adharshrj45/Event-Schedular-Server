@@ -7,7 +7,15 @@ const app=express();
 
 
 //middleware
-app.use(cors());
+app.use(
+    cors({
+        origin: 'http://localhost:3000', // Allow requests only from this origin
+        methods: ['GET', 'POST'], // Specify allowed HTTP methods
+        credentials: true, // Include credentials like cookies in requests
+        allowedHeaders:true,
+    })
+);
+
 app.use(express.json());
 
 
